@@ -10,6 +10,10 @@
     "default_popup": "popup.html",
     "default_title": "Super malicious hacking extension"
   },
+  // "content_scripts": [{
+  //   "matches": ["localhost:3000"],
+  //   "js": ["popup.js"]
+  // }],
   "permissions": [
     "activeTab",
     "storage"

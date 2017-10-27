@@ -8,6 +8,13 @@ http://blog.trendmicro.com/trendlabs-security-intelligence/an-in-depth-look-into
 
 
 -Google has security feature checks
+  - A sample of what is shown when you create an extension
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
 - SO How do malicious browsers get into the Chrome store?
   -evasion tactics, bypassing security checks
     -multi-script files that work together. The malware is split up between different files so that each file might not seem like it has malicious tendencies, and it may look clean. But in reality it works with other files to perform malicious attacks

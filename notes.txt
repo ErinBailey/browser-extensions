@@ -7,6 +7,7 @@ https://developer.chrome.com/extensions/tabs#method-query
 https://developer.chrome.com/extensions/content_scripts
 
 http://blog.trendmicro.com/trendlabs-security-intelligence/an-in-depth-look-into-malicious-browser-extensions/
+https://developer.chrome.com/extensions/tabs#method-query
 
 
 -How can they be bad?

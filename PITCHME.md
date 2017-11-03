@@ -4,6 +4,9 @@
 
 ![logos](images/logos.png) 
 
+---
+
+![IETrash](images/IETrash.png) 
 
 ---
 ## What's in an extension?

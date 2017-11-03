@@ -6,7 +6,7 @@
 
 ---
 
-![IETrash](images/IETrash.png) 
+![IESilly](images/IESilly.png) 
 
 ---
 ## What's in an extension?

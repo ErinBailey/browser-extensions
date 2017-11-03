@@ -9,6 +9,18 @@ https://developer.chrome.com/extensions/content_scripts
 http://blog.trendmicro.com/trendlabs-security-intelligence/an-in-depth-look-into-malicious-browser-extensions/
 https://developer.chrome.com/extensions/tabs#method-query
 
+- What is an extension? 
+  - If you're using chrome or safari, it's called an extension, if you're using firefox it's a plugin, and if you're using internet explorer, you probably actually don't care about security at all so you're good. 
+  (IE addresses bugs on a fixed schedule, despite the fact that they are not discovered every 3rd wednesday of the month. They're also slow to address these bugs, and they don't check for outdated extensions) 
+  But whatever you want to call them, theyu are programs that adds bits of functionality to your browser. you install them instantly without needing to restart your browswer, and they update
+    silently when new versions are available. 
+    They are implemented with standard web technologies that we're familiar with. HTML, Css, Javascript, etc.
+    
+-Components of an extension
+  compressed files
+
+-Components of a browser extension
+
 
 -How can they be bad?
   - what info it can grab (all form fills) what control it has (preventing you from reaching out to other sites)

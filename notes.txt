@@ -21,9 +21,7 @@ Good morning! My name is Erin and I want to talk about browser extensions from t
 -Components of an extension
   I want to go over a high level overview of the anatomy of an extension, extensions have a compressed directory with a bunch of files. It needs a manifest.json which contains meta data about the extension, lists permissions, and points to the extensions other Components
   The components that it points to are what is going to provide functionality like browser actions or page actions, running scripts,  
-
--How can they be bad?
-  - what info it can grab (all form fills) what control it has (preventing you from reaching out to other sites)
+ what info it can grab (all form fills) what control it has (preventing you from reaching out to other sites)
   https://en.wikipedia.org/wiki/Cross-site_scripting
   - Cross-site scripting (XSS) 
     - a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users.
@@ -31,18 +29,22 @@ Good morning! My name is Erin and I want to talk about browser extensions from t
 
 -Google has security feature checks
   - A sample of what is shown when you create an extension
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-    -->
+  - blocking any extensions not hosted on chrome's web store 
+    in 2015 when they implemented this rule, they said they saw a 75% in support requests for uninstalling unwanted extensions when it made this policy official for Windows users
+  - Vetting process
+
+
 - SO How do malicious browsers get into the Chrome store?
-  - evasion tactics, bypassing security checks
-    -multi-script files that work together. The malware is split up between different files so that each file might not seem like it has malicious tendencies, and it may look clean. But in reality it works with other files to perform malicious attacks
-    -using hex to encode strings in the javascript content content (show sample)
-    -using HTTPs and a known, good domain to host malicious JavaScript like heroku app. This gives it the appearance of a legitimate extension
-    -using fake file extensions
+    - Spoofing  
+      https://www.theverge.com/2017/10/9/16449236/google-chrome-extensions-malicious-security-controls
+      - More than 10 million people use the legitimate service ADblock plus
+      - the knockoff developers still managed to convince 37,000 people to download it
+    There are various other evasion tactics in order to bypass security checks
+    - multi-script files that work together. The malware is split up between different files so that each file might not seem like it has malicious tendencies, and it may look clean. But in reality it works with other files to perform malicious attacks
+    - using hex to encode strings in the javascript content content (show sample)
+    - using HTTPs and a known, good domain to host malicious JavaScript like heroku app. This gives it the appearance of a legitimate extension
+    - using fake file extensions
+
 
 - The ins and outs of browser plugins
   - manifest
@@ -55,3 +57,5 @@ Good morning! My name is Erin and I want to talk about browser extensions from t
 
 - How can you protect yourself?
   - strongly advise users to avoid clicking links from messages
+  - make sure the extension comes from a legitimate source
+  - "That presents an especially tricky situation for users who might not carefully check each extension’s developer."

@@ -29,5 +29,7 @@
 
 
 ---
+
 - Using hex to encode strings in the javascript content
+![good](images/good.png)
 ![hex](images/hex.png)

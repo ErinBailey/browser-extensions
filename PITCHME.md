@@ -13,12 +13,12 @@
 ![files](images/files.png)
 
 ---
-## Security checks
+## Security vetting process
 ![warning](images/warning.png)
 
-- Regular scans
+- Block any extensions with suspicious permissions
 - Blocking any extensions not hosted on Chrome Web Store
-- Vetting process
+- Regular scans
 
 ---
 

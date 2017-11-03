@@ -1,13 +1,12 @@
 https://developer.chrome.com/extensions/contentSecurityPolicy
 https://developer.chrome.com/extensions/examples/tutorials/getstarted/popup.js
 https://developer.chrome.com/extensions/getstarted
-
 https://developer.chrome.com/extensions/tabs#method-query
-
 https://developer.chrome.com/extensions/content_scripts
-
 http://blog.trendmicro.com/trendlabs-security-intelligence/an-in-depth-look-into-malicious-browser-extensions/
 https://developer.chrome.com/extensions/tabs#method-query
+https://en.wikipedia.org/wiki/Cross-site_scripting
+https://www.theverge.com/2017/10/9/16449236/google-chrome-extensions-malicious-security-controls
 
 Good morning! My name is Erin and I want to talk about browser extensions from both a technical and nontechnical perspective. Specifically from the standpoint of a developer with an emphasis on security. 
 
@@ -16,30 +15,34 @@ Good morning! My name is Erin and I want to talk about browser extensions from b
   (IE addresses bugs on a fixed schedule, despite the fact that they are not discovered every 3rd wednesday of the month. They're also slow to address these bugs, and they don't check for outdated extensions) 
   But whatever you want to call them, they are programs that adds bits of functionality to your browser. you install them instantly without needing to restart your browswer, and they update
     silently when new versions are available. 
-    They are implemented with standard web technologies that we're familiar with. HTML, Css, Javascript, etc.
+    They are implemented with standard web technologies. HTML, Css, Javascript, etc.
 
 -Components of an extension
-  I want to go over a high level overview of the anatomy of an extension, extensions have a compressed directory with a bunch of files. It needs a manifest.json which contains meta data about the extension, lists permissions, and points to the extensions other Components
-  The components that it points to are what is going to provide functionality like browser actions or page actions, running scripts,  
- what info it can grab (all form fills) what control it has (preventing you from reaching out to other sites)
-  https://en.wikipedia.org/wiki/Cross-site_scripting
-  - Cross-site scripting (XSS) 
-    - a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users.
-    - Cross-site scripting carried out on websites accounted for roughly 84% of all security vulnerabilities documented by Symantec as of 2007.[1] Bug bounty company HackerOne in 2017 reported that XSS is still a major threat vector.[2] XSS effects vary in range from petty nuisance to significant security risk, depending on the sensitivity of the data handled by the vulnerable site and the nature of any security mitigation implemented by the site's owner.
+  So What's in an extension? What is the anatomy of an extension? extensions have a compressed directory with a bunch of files. It needs a manifest.json 
+  which contains meta data about the extension, lists permissions, and points to the extensions other Components
+  The components that it points to are what is going to provide functionality like browser actions or page actions, running scripts like grabbing form fill data or 
+  closing and opening tabs based off events.
+
+  Although they are meant to be convenient and helpful to users, much like everything in this world, that gets ruined by people who have malicious intentions. Extensions have quite a bit of power, 
+  once they're installed they can grab all form your fill data you enter, including sensitive information like usernames, passwords, creditcard information, addresses, etc. They can control what websites you can or cannot visit, they 
+  close tabs out without your permission, and they can essentially read and change everything you see on webpages.
 
 -Google has security feature checks
+  Before extensions are approved for use in the chrome store, they must go through security checks
+  - blocking anything attempting to reach out to a filesystem
   - A sample of what is shown when you create an extension
-  - blocking any extensions not hosted on chrome's web store 
+  - blocking any extensions not hosted on chrome's web store
     in 2015 when they implemented this rule, they said they saw a 75% in support requests for uninstalling unwanted extensions when it made this policy official for Windows users
   - Vetting process
 
 
 - SO How do malicious browsers get into the Chrome store?
-    - Spoofing  
-      https://www.theverge.com/2017/10/9/16449236/google-chrome-extensions-malicious-security-controls
-      - More than 10 million people use the legitimate service ADblock plus
-      - the knockoff developers still managed to convince 37,000 people to download it
-    There are various other evasion tactics in order to bypass security checks
+    - Spoofing .
+    The developers who are out to capture your data and use it for their own gain rely on the reputation of legitimate products that are wildly popular in the community. For example, in 2015 there was an extensions added to the chrome store called "AdBlocker". 
+    For those of you familiar with AdBlock Plus, More than 10 million people use that service! The developers of the fake AdBlocker posed as this credible and reputable team with a similar logo, and 
+    they developers managed to convince 37,000 people to download it. Which is pretty significant considering they go through a fairly extensive security proces.
+    They responded to the reports of the extension being fake within a few hours, but there is some questions on how it got there in the first place. 
+    Along with spoofing, there are tactics such as 
     - multi-script files that work together. The malware is split up between different files so that each file might not seem like it has malicious tendencies, and it may look clean. But in reality it works with other files to perform malicious attacks
     - using hex to encode strings in the javascript content content (show sample)
     - using HTTPs and a known, good domain to host malicious JavaScript like heroku app. This gives it the appearance of a legitimate extension
@@ -59,3 +62,10 @@ Good morning! My name is Erin and I want to talk about browser extensions from b
   - strongly advise users to avoid clicking links from messages
   - make sure the extension comes from a legitimate source
   - "That presents an especially tricky situation for users who might not carefully check each extension’s developer."
+
+-Thanks!
+  I think that as developers, security is often overlooked. The reason I chose to reasearch this topic from the point of a negative use
+  was because I think that it strengthens our skills to then go the opposite direction down the happy path and think "Okay, how can I prevent that from happening"
+  Anow now I'm going to show you the world's most uninspiring live demo.
+
+  

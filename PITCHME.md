@@ -50,4 +50,4 @@
 ---
 ### Thank You!
 
-![Lemon](images/Lemon.png)
+![Lemon](images/Lemon.jpg)

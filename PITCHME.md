@@ -46,7 +46,7 @@
 
 ---
 ## How can I protect myself?
-- Know the reputaiton of the developers
+- Know the reputation of the developers
 - Know the reputation of the provider (i.e Chrome Store)
 - Don't click on weird links
 

@@ -28,11 +28,11 @@ Good morning! My name is Erin and I want to talk about browser extensions from b
   close tabs out without your permission, and they can essentially read and change everything you see on webpages.
 
 -Google has security feature checks
-  Before extensions are approved for use in the chrome store, they must go through security checks
-  - blocking anything attempting to reach out to a filesystem
+  Because people have been known to take advantage of cool technologies, Before extensions are approved for use in the chrome store and available to the public, they must go through security checks
+  - blocking anything with suspicious permissions like having access to reach out to a filesystem
   - A sample of what is shown when you create an extension
   - blocking any extensions not hosted on chrome's web store
-    in 2015 when they implemented this rule, they said they saw a 75% in support requests for uninstalling unwanted extensions when it made this policy official for Windows users
+    in 2015 when they implemented this policy official for Windows users, they said they saw a 75% decrease in support requests for uninstalling unwanted extensions
   - Vetting process
 
 
@@ -48,22 +48,12 @@ Good morning! My name is Erin and I want to talk about browser extensions from b
     - using HTTPs and a known, good domain to host malicious JavaScript like heroku app. This gives it the appearance of a legitimate extension
     - using fake file extensions
 
-
-- The ins and outs of browser plugins
-  - manifest
-  - background.js
-    - able to prevent the removal of the malicious plugin by closing the chrome tab to       manage your extensions
-    - you can manipulate it to prevent access to anti virus websites
-  - removes the security option from HTTP response header. This would typically stop cross-site scripting attacks
-  - runs javascript in the background. What kind of control do they have over you? they can screen scrape, read form fill data (username, passwords, etc), can control social media account (follow, like, subscribe, unsubscribe, friend request)
-
-
 - How can you protect yourself?
   - strongly advise users to avoid clicking links from messages
   - make sure the extension comes from a legitimate source
   - "That presents an especially tricky situation for users who might not carefully check each extension’s developer."
 
--Thanks!
+- Thanks!
   The reason I chose to reasearch this topic from the point of a negative use
   was because I think that as developers, security is often overlooked which can leave a program very vulnerable, and eventually it can leave the user very vulnerable! I think that it strengthens our skills to then go the opposite direction down the happy path and think "Okay, how can I prevent that from happening"
   Anow now I'm going to show you the world's most uninspiring live demo.

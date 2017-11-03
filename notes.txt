@@ -64,8 +64,8 @@ Good morning! My name is Erin and I want to talk about browser extensions from b
   - "That presents an especially tricky situation for users who might not carefully check each extension’s developer."
 
 -Thanks!
-  I think that as developers, security is often overlooked. The reason I chose to reasearch this topic from the point of a negative use
-  was because I think that it strengthens our skills to then go the opposite direction down the happy path and think "Okay, how can I prevent that from happening"
+  The reason I chose to reasearch this topic from the point of a negative use
+  was because I think that as developers, security is often overlooked which can leave a program very vulnerable, and eventually it can leave the user very vulnerable! I think that it strengthens our skills to then go the opposite direction down the happy path and think "Okay, how can I prevent that from happening"
   Anow now I'm going to show you the world's most uninspiring live demo.
 
   

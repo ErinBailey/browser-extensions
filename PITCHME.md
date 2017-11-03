@@ -31,5 +31,9 @@
 ---
 
 - Using hex to encode strings in the javascript content
-![good](images/good.png)
 ![hex](images/hex.png)
+
+---
+- Using HTTPs and a known domain for hosting
+![HTTPS](images/HTTPS.png)
+

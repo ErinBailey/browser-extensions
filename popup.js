@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
-document.getElementById('login_form').onsubmit = (e) => {
+document.getElementById('login_form').onclick = (e) => {
   console.log(document.getElementById('email').value)
   console.log(document.getElementById('pass').value)
   return false
